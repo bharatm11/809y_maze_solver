@@ -116,8 +116,17 @@ void Maze::displayMaze() {
 	cout << endl;
 }
 
-bool Maze::isObstacle(int x, int y){
-  if(maze_arr[x][y] == '#') {
+bool Maze::isObstacle(int x, int y, MobileRobot robot){
+  if((maze_arr[x][y] == '#')||(maze_arr[x][y] == robot.wrong_turn)||
+                                    (maze_arr[x][y] == robot.visited_marker)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+bool Maze::isGoal(MobileRobot robot, Targets goal) {
+  if(robot.current_position == goal.position) {
     return true;
   } else {
     return false;
@@ -128,10 +137,8 @@ bool Maze::isTargetValid(int, int, char) {
 
 }
 
-bool Maze::isGoal(MobileRobot robot, Targets goal) {
-  if(robot.current_position == goal.position) {
-    return true;
-  } else {
-    return false;
-  }
+bool Maze::isInputValid(int, int, char) {
+
 }
+
+void changeSpace(int, int, char);

@@ -51,10 +51,10 @@ public:
 	void placeBottle(Targets);
 	void placePlate(Targets);
 	void displayMaze();
+	bool isObstacle(int, int, MobileRobot);
+	bool isGoal(MobileRobot, Targets);
 	bool isInputValid(int, int);
 	bool isTargetValid(int, int, char);
 	void changeSpace(int, int, char);
-	bool isObstacle(int, int);
-	bool isGoal(MobileRobot, Targets);
 };
 #endif //MAZE_HPP_
