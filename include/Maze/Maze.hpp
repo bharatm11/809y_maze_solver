@@ -46,15 +46,13 @@ private:
 	int m;
 	std::vector<int> start_position;
 public:
-	Maze(std::string, Targets, Targets);
+	Maze(std::string);
 	void readMaze(std::string);
-	void placeBottle(Targets);
-	void placePlate(Targets);
 	void displayMaze();
 	bool isObstacle(int, int, MobileRobot);
 	bool isGoal(MobileRobot, Targets);
-	bool isInputValid(MobileRobot);
-	bool isTargetValid(int, int, char);
-	void changeSpace(int, int, char);
+	std::vector<int> isTargetInputValid(int, int);
+	// bool isTargetValid(int, int, char);
+	void changeSpace(std::vector<int>, char);
 };
 #endif //MAZE_HPP_

@@ -42,7 +42,8 @@ class Targets {
 private:
   std::vector<int> position;
   friend class Maze;
+  friend class MobileRobot;
 public:
-	Targets(int, int);
+	Targets(std::vector<int>);
 };
 #endif //TARGETS_HPP_

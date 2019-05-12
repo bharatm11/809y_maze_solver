@@ -22,38 +22,15 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 /**
-* @file MobileRobot.hpp
+* @file Targets.cpp
 * @author Bharat Mathur (Github: bharatm11)
 * @date 12 May 2019
 * @copyright 2019 Bharat Mathur (Github: bharatm11)
 * @brief <brief>
 */
+#include "MobileRobot.hpp"
+#include "Targets.hpp"
 #include <vector>
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "Targets.hpp"
-
-#ifndef MOBILEROBOT_HPP_
-#define MOBILEROBOT_HPP_
-
-class MobileRobot {
-private:
-   std::vector<int> current_position;
-   char visited_marker; // | or -
-   char wrong_turn; //X or Y
-   Targets target;
-  // std::stack<RobotState*>state_stack; // Defining stack
-  friend class Maze;
-public:
-  // MobileRobot();
-  virtual std::vector<int> getTargetLoc();
-  // virtual std::vector<int> Up(int,int);
-  // virtual std::vector<int> Down(int,int);
-  // virtual std::vector<int> Right(int,int);
-  // virtual std::vector<int> Left(int,int);
-  // virtual void update(std::string);     //  =0 Doubt
-  // virtual ~MobileRobot(){};
-};
-
-#endif //MOBILEROBOT_HPP_

@@ -36,6 +36,8 @@
 
 class WheeledRobot: public MobileRobot {
 public:
+  WheeledRobot(int, int, Targets);
+  virtual std::vector<int> getTargetLoc();
 	// WheeledRobot();
 	// virtual std::vector<int> Up(int,int) override;
 	// virtual std::vector<int> Down(int,int) override;

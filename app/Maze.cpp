@@ -37,13 +37,10 @@
 #include <string>
 using std::cout;
 using std::endl;
-Maze::Maze(std::string filename, Targets plate, Targets bottle) {
+Maze::Maze(std::string filename) {
   n = 31;
   m = 46;
   Maze::readMaze(filename);
-  Maze::placeBottle(bottle);
-  Maze::placePlate(plate);
-  Maze::displayMaze();
 }
 
 void Maze::readMaze(std::string filename) {
@@ -63,17 +60,17 @@ void Maze::readMaze(std::string filename) {
   }
 }
 
-void Maze::placeBottle(Targets bottle) {
-  int x{bottle.position[0]};
-  int y{bottle.position[1]};
-  maze_arr[x][y] = 'b';
-}
-
-void Maze::placePlate(Targets plate) {
-  int x{plate.position[0]};
-  int y{plate.position[1]};
-  maze_arr[x][y] = 'p';
-}
+// void Maze::placeBottle(Targets bottle) {
+//   int x{bottle.position[0]};
+//   int y{bottle.position[1]};
+//   maze_arr[x][y] = 'b';
+// }
+//
+// void Maze::placePlate(Targets plate) {
+//   int x{plate.position[0]};
+//   int y{plate.position[1]};
+//   maze_arr[x][y] = 'p';
+// }
 //
 // void Maze::displayMaze() {
 // 	// This function displays the maze itself, with boundaries and numbering
@@ -133,20 +130,29 @@ bool Maze::isGoal(MobileRobot robot, Targets goal) {
   }
 }
 
-bool Maze::isTargetValid(int, int, char) {
+// bool Maze::isTargetValid(Targets, MobileRobot robot) {
+//   int start_x = robot.current_position[0];
+//   int start_y = robot.current_position[1];
+//   while(maze_arr[start_x][start_y]=='#'||start_x<0||start_x>n||start_y<0||start_y>m) {
+//     std::cout<< "Invalid start position. Please enter different coordinates for the start position of the robot:"<<std::endl;
+//     std::cin >>start_x>>start_y;
+//   }
+//   robot.current_position[0] = start_x;
+//   robot.current_position[1] = start_y;
+//   return true;
+// }
 
-}
-
-bool Maze::isInputValid(MobileRobot robot) {
-  int start_x = robot.current_position[0];
-  int start_y = robot.current_position[1];
+std::vector<int> Maze::isTargetInputValid(int start_x, int start_y) {
   while(maze_arr[start_x][start_y]=='#'||start_x<0||start_x>n||start_y<0||start_y>m) {
-    std::cout<< "Invalid start position. Please enter different coordinates for the start position of the robot:"<<std::endl;
+    std::cout<< "Invalid input position. Please enter different coordinates: "<<std::endl;
     std::cin >>start_x>>start_y;
   }
-  robot.current_position[0] = start_x;
-  robot.current_position[1] = start_y;
-  return true;
+  std::vector<int> vec;
+  vec.push_back(start_x);
+  vec.push_back(start_y);
+  return vec;
 }
 
-void changeSpace(int, int, char);
+void Maze::changeSpace(std::vector<int> space, char) { // check for clashes
+
+}

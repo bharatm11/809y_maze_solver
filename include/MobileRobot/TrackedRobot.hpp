@@ -29,13 +29,15 @@
 * @brief <brief>
 */
 #include "MobileRobot.hpp"
+#include "Targets.hpp"
 
 #ifndef TRACKEDROBOT_HPP_
 #define TRACKEDROBOT_HPP_
 
 class TrackedRobot: public MobileRobot {
 public:
-	// TrackedRobot();
+	 TrackedRobot(int, int, Targets);
+   virtual std::vector<int> getTargetLoc();
 	// virtual std::vector<int> Up(int,int) override;
 	// virtual std::vector<int> Down(int,int) override;
 	// virtual std::vector<int> Right(int,int) override;

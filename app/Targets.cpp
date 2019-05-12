@@ -35,7 +35,6 @@
 #include <fstream>
 #include <string>
 
-Targets::Targets(int x, int y) {
-  position.push_back(x);
-  position.push_back(y);
+Targets::Targets(std::vector<int> vec) {
+  position = vec;
 }
