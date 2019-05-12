@@ -98,27 +98,27 @@ void Maze::placePlate(Targets plate) {
 // 	cout << endl;
 // }
 void Maze::displayMaze() {
-	cout << "\n     ";
-	for (int j=0; j<m; ++j)
-		cout << j << " ";
-	cout << "\n   ---";
-	for (int j=0; j<m; ++j)
-		cout << "--";
-	for (int i=0; i<n; ++i) {
-		cout << "\n " << i << " | ";
-		for (int j=0; j<m; ++j)
-			cout << maze_arr[i][j] << " ";
-		cout << "|";
-	}
-	cout << "\n   ---";
-	for (int j=0; j<m; ++j)
-		cout << "--";
-	cout << endl;
+  cout << "\n     ";
+  for (int j=0; j<m; ++j)
+  cout << j << " ";
+  cout << "\n   ---";
+  for (int j=0; j<m; ++j)
+  cout << "--";
+  for (int i=0; i<n; ++i) {
+    cout << "\n " << i << " | ";
+    for (int j=0; j<m; ++j)
+    cout << maze_arr[i][j] << " ";
+    cout << "|";
+  }
+  cout << "\n   ---";
+  for (int j=0; j<m; ++j)
+  cout << "--";
+  cout << endl;
 }
 
 bool Maze::isObstacle(int x, int y, MobileRobot robot){
   if((maze_arr[x][y] == '#')||(maze_arr[x][y] == robot.wrong_turn)||
-                                    (maze_arr[x][y] == robot.visited_marker)) {
+  (maze_arr[x][y] == robot.visited_marker)) {
     return true;
   } else {
     return false;
@@ -137,8 +137,16 @@ bool Maze::isTargetValid(int, int, char) {
 
 }
 
-bool Maze::isInputValid(int, int, char) {
-
+bool Maze::isInputValid(MobileRobot robot) {
+  int start_x = robot.current_position[0];
+  int start_y = robot.current_position[1];
+  while(maze_arr[start_x][start_y]=='#'||start_x<0||start_x>n||start_y<0||start_y>m) {
+    std::cout<< "Invalid start position. Please enter different coordinates for the start position of the robot:"<<std::endl;
+    std::cin >>start_x>>start_y;
+  }
+  robot.current_position[0] = start_x;
+  robot.current_position[1] = start_y;
+  return true;
 }
 
 void changeSpace(int, int, char);

@@ -53,7 +53,7 @@ public:
 	void displayMaze();
 	bool isObstacle(int, int, MobileRobot);
 	bool isGoal(MobileRobot, Targets);
-	bool isInputValid(int, int);
+	bool isInputValid(MobileRobot);
 	bool isTargetValid(int, int, char);
 	void changeSpace(int, int, char);
 };

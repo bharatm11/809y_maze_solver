@@ -36,7 +36,7 @@ class MobileRobot {
 private:
    std::vector<int> current_position;
    char visited_marker; // | or -
-   char worng_turn; //X or Y
+   char wrong_turn; //X or Y
   // std::stack<RobotState*>state_stack; // Defining stack
   friend class Maze;
 public:

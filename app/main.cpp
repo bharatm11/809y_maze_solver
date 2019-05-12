@@ -11,6 +11,5 @@ int main()
   std::string filename = "/home/bharat/ENPM809y/final/cpp-boilerplate/maze.txt";
   Maze maze(filename, plate, bottle);
   cout<<endl;
-  cout<<maze.isObstacle(2,3);
   return 0;
 }
