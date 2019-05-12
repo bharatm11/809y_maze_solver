@@ -48,6 +48,6 @@ TrackedRobot::TrackedRobot(int x, int y, Targets t) { // add is valid check
   current_position.push_back(y);
 }
 
-TrackedRobot::getRobotLoc() {
+std::vector<int> TrackedRobot::getRobotLoc() {
   return current_position;
 }
