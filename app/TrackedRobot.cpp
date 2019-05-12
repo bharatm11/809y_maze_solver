@@ -38,7 +38,7 @@
 #include <fstream>
 #include <string>
 
-TrackedRobot::TrackedRobot(int x, int y, Targets t) {
+TrackedRobot::TrackedRobot(int x, int y, Targets t) { // add is valid check
   target = t;
   while(x == target.position[0] && y == target.position[1]) {
     std::cout<< "Invalid start position. Please enter different coordinates: "<<std::endl;
