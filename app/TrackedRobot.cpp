@@ -44,6 +44,8 @@ TrackedRobot::TrackedRobot(int x, int y, Targets t) { // add is valid check
     std::cout<< "Invalid start position. Please enter different coordinates: "<<std::endl;
     std::cin >>x>>y;
   }
+  current_position.push_back(x);
+  current_position.push_back(y);
 }
 
 TrackedRobot::getTargetLoc() {
