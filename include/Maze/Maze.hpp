@@ -36,6 +36,8 @@
 #include <fstream>
 #include <string>
 #include "Targets.hpp"
+#include "Targets.hpp"
+#include "MobileRobot.hpp"
 
 class Maze {
 private:
@@ -45,13 +47,14 @@ private:
 	std::vector<int> start_position;
 public:
 	Maze(std::string, Targets, Targets);
-	void displayMaze();
+	void readMaze(std::string);
 	void placeBottle(Targets);
 	void placePlate(Targets);
-	void readMaze(std::string);
+	void displayMaze();
 	bool isInputValid(int, int);
 	bool isTargetValid(int, int, char);
 	void changeSpace(int, int, char);
 	bool isObstacle(int, int);
+	bool isGoal(MobileRobot, Targets);
 };
 #endif //MAZE_HPP_

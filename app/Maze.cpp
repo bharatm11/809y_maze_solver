@@ -74,26 +74,64 @@ void Maze::placePlate(Targets plate) {
   int y{plate.position[1]};
   maze_arr[x][y] = 'p';
 }
-
+//
+// void Maze::displayMaze() {
+// 	// This function displays the maze itself, with boundaries and numbering
+// 	cout << "\n     ";
+// 	for (int j=0; j<m; ++j) {
+// 		cout << j << " ";
+// 	}
+// 	cout << "\n   ---";
+// 	for (int j=0; j<m; ++j) {
+// 		cout << "--";
+// 	}
+// 	for (int i=0; i<n; ++i) {
+// 		cout << "\n " << i << " | ";
+// 		for (int j=0; j<m; ++j)
+// 		cout << maze_arr[i][j] << " ";
+// 		cout << "|";
+// 	}
+// 	cout << "\n   ---";
+// 	for (int j=0; j<m; ++j) {
+// 		cout << "--";
+// 	}
+// 	cout << endl;
+// }
 void Maze::displayMaze() {
-	// This function displays the maze itself, with boundaries and numbering
 	cout << "\n     ";
-	for (int j=0; j<m; ++j) {
+	for (int j=0; j<m; ++j)
 		cout << j << " ";
-	}
 	cout << "\n   ---";
-	for (int j=0; j<m; ++j) {
+	for (int j=0; j<m; ++j)
 		cout << "--";
-	}
 	for (int i=0; i<n; ++i) {
 		cout << "\n " << i << " | ";
 		for (int j=0; j<m; ++j)
-		cout << maze_arr[i][j] << " ";
+			cout << maze_arr[i][j] << " ";
 		cout << "|";
 	}
 	cout << "\n   ---";
-	for (int j=0; j<m; ++j) {
+	for (int j=0; j<m; ++j)
 		cout << "--";
-	}
 	cout << endl;
+}
+
+bool Maze::isObstacle(int x, int y){
+  if(maze_arr[x][y] == '#') {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+bool Maze::isTargetValid(int, int, char) {
+
+}
+
+bool Maze::isGoal(MobileRobot robot, Targets goal) {
+  if(robot.current_position == goal.position) {
+    return true;
+  } else {
+    return false;
+  }
 }

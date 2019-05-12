@@ -34,16 +34,17 @@
 
 class MobileRobot {
 private:
-  vector<int> current_position;
-  std::stack<RobotState*>state_stack; // Defining stack
+   std::vector<int> current_position;
+  // std::stack<RobotState*>state_stack; // Defining stack
+  friend class Maze;
 public:
-  MobileRobot();
-  virtual std::vector<int> Up(int,int);
-  virtual std::vector<int> Down(int,int);
-  virtual std::vector<int> Right(int,int);
-  virtual std::vector<int> Left(int,int);
-  virtual void update(std::string);     //  =0 Doubt
-  virtual ~MobileRobot(){};
+  // MobileRobot();
+  // virtual std::vector<int> Up(int,int);
+  // virtual std::vector<int> Down(int,int);
+  // virtual std::vector<int> Right(int,int);
+  // virtual std::vector<int> Left(int,int);
+  // virtual void update(std::string);     //  =0 Doubt
+  // virtual ~MobileRobot(){};
 };
 
 #endif //MOBILEROBOT_HPP_
