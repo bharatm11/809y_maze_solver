@@ -28,24 +28,40 @@
 * @copyright 2019 Bharat Mathur (Github: bharatm11)
 * @brief <brief>
 */
-#include "Maze.hpp"
-#include "Targets.hpp"
-#include "MobileRobot.hpp"
-#include "WheeledRobot.hpp"
+
+#include "../include/Maze/Maze.hpp"
+#include "../include/Targets/Targets.hpp"
+#include "../include/MobileRobot/MobileRobot.hpp"
+#include "../include/MobileRobot/WheeledRobot.hpp"
 #include <vector>
 #include <iostream>
 #include <fstream>
 #include <string>
 
-TrackedRobot::TrackedRobot(int x, int y, Targets t) {
+WheeledRobot::WheeledRobot(int x, int y, Targets t) { // add is valid check
   target = t;
   while(x == target.position[0] && y == target.position[1]) {
     std::cout<< "Invalid start position. Please enter different coordinates: "<<std::endl;
     std::cin >>x>>y;
   }
+  current_position.push_back(x);
+  current_position.push_back(y);
 }
 
-TrackedRobot::getTargetLoc() {
-  std::vector<int> vec = target.position;
-  return vec;
+std::vector<int> WheeledRobot::getRobotLoc() {
+  return current_position;
+}
+
+char WheeledRobot::getVisitedMarker() {
+  return visited_marker;
+
+}
+char WheeledRobot::getWrongTurnMarker() {
+  return wrong_turn;
+}
+std::vector<int> WheeledRobot::getGoal() {
+  std::vector<int> v;
+  v = target.position;
+  return v;
+
 }

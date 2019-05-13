@@ -28,8 +28,8 @@
 * @copyright 2019 Bharat Mathur (Github: bharatm11)
 * @brief <brief>
 */
-#include "MobileRobot.hpp"
-#include "Targets.hpp"
+#include "../include/MobileRobot/MobileRobot.hpp"
+#include "../include/Targets/Targets.hpp"
 #include <vector>
 #include <iostream>
 #include <fstream>

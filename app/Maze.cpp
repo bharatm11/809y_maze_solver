@@ -28,7 +28,6 @@
 * @copyright 2019 Bharat Mathur (Github: bharatm11)
 * @brief <brief>
 */
-
 #include "../include/Maze/Maze.hpp"
 #include "../include/Targets/Targets.hpp"
 #include <vector>
@@ -113,22 +112,21 @@ void Maze::displayMaze() {
   cout << endl;
 }
 
-bool Maze::isObstacle(int x, int y, MobileRobot robot){
-  if((maze_arr[x][y] == '#')||(maze_arr[x][y] == robot.wrong_turn)||
-  (maze_arr[x][y] == robot.visited_marker)) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-bool Maze::isGoal(MobileRobot robot, Targets goal) {
-  if(robot.current_position == goal.position) {
-    return true;
-  } else {
-    return false;
-  }
-}
+// bool Maze::isObstacle(int x, int y, MobileRobot robot){
+//   if((maze_arr[x][y] == '#')||(maze_arr[x][y] == robot.getWrongTurnMarker())||(maze_arr[x][y] == robot.getVisitedMarker())) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+//
+// bool Maze::isGoal(MobileRobot robot, Targets goal) {
+//   if(robot.getRobotLoc() == goal.position) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
 // bool Maze::isTargetValid(Targets, MobileRobot robot) {
 //   int start_x = robot.current_position[0];

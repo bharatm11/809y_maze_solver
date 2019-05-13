@@ -32,7 +32,6 @@
 #pragma once
 #include "../MobileRobot/MobileRobot.hpp"
 #include "../Targets/Targets.hpp"
-#include "../Targets/Targets.hpp"
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -49,8 +48,8 @@ public:
   Maze(std::string);
   void readMaze(std::string);
   void displayMaze();
-  bool isObstacle(int, int, MobileRobot);
-  bool isGoal(MobileRobot, Targets);
+  // bool isObstacle(int, int, MobileRobot);
+  // bool isGoal(int, int);//MobileRobot, Targets);
   std::vector<int> isTargetInputValid(int, int);
   // bool isTargetValid(int, int, char);
   void changeSpace(std::vector<int>, char);

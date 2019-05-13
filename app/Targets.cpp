@@ -28,13 +28,15 @@
 * @copyright 2019 Bharat Mathur (Github: bharatm11)
 * @brief <brief>
 */
-#include "Maze.hpp"
-#include "Targets.hpp"
+#include "../include/Maze/Maze.hpp"
+#include "../include/Targets/Targets.hpp"
 #include <vector>
 #include <iostream>
 #include <fstream>
 #include <string>
-
+Targets::Targets() {
+  
+}
 Targets::Targets(std::vector<int> vec) {
   position = vec;
 }

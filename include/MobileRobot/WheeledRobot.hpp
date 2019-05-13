@@ -31,18 +31,28 @@
 #ifndef WHEELEDROBOT_HPP_
 #define WHEELEDROBOT_HPP_
 
-#include "MobileRobot.hpp"
+#include "../Targets/Targets.hpp"
+#include "../MobileRobot/MobileRobot.hpp"
 
 class WheeledRobot : public MobileRobot {
+private:
+  std::vector<int> current_position;
+  char visited_marker; // | or -
+  char wrong_turn;     // X or Y
+  Targets target;
+  friend class Maze;
 public:
   WheeledRobot(int, int, Targets);
-  virtual std::vector<int> getTargetLoc();
+  virtual std::vector<int> getRobotLoc();
+  virtual char getVisitedMarker();
+  virtual char getWrongTurnMarker();
+  virtual std::vector<int> getGoal();
   // WheeledRobot();
   // virtual std::vector<int> Up(int,int) override;
   // virtual std::vector<int> Down(int,int) override;
   // virtual std::vector<int> Right(int,int) override;
   // virtual std::vector<int> Left(int,int) override;
-  // virtual ~WheeledRobot(){};
+  virtual ~WheeledRobot(){};
 };
 
 #endif // WHEELEDROBOT_HPP_

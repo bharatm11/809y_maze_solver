@@ -29,10 +29,10 @@
 * @brief <brief>
 */
 
-#include "Maze.hpp"
-#include "Targets.hpp"
-#include "MobileRobot.hpp"
-#include "TrackedRobot.hpp"
+#include "../include/Maze/Maze.hpp"
+#include "../include/Targets/Targets.hpp"
+#include "../include/MobileRobot/MobileRobot.hpp"
+#include "../include/MobileRobot/TrackedRobot.hpp"
 #include <vector>
 #include <iostream>
 #include <fstream>
@@ -50,4 +50,18 @@ TrackedRobot::TrackedRobot(int x, int y, Targets t) { // add is valid check
 
 std::vector<int> TrackedRobot::getRobotLoc() {
   return current_position;
+}
+
+char TrackedRobot::getVisitedMarker() {
+  return visited_marker;
+
+}
+char TrackedRobot::getWrongTurnMarker() {
+  return wrong_turn;
+}
+std::vector<int> TrackedRobot::getGoal() {
+  std::vector<int> v;
+  v = target.position;
+  return v;
+
 }

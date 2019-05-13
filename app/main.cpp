@@ -1,9 +1,8 @@
-#include <iostream>
-#include "Maze.hpp"
-#include "Targets.hpp"
-#include "MobileRobot.hpp"
-#include "WheeledRobot.hpp"
-#include "TrackedRobot.hpp"
+#include "../include/Maze/Maze.hpp"
+#include "../include/Targets/Targets.hpp"
+#include "../include/MobileRobot/MobileRobot.hpp"
+#include "../include/MobileRobot/WheeledRobot.hpp"
+#include "../include/Targets/Targets.hpp"
 using namespace std;
 int main()
 {
