@@ -49,7 +49,6 @@ int main()
   WheeledRobot w_robot(input_x, input_y, plate_bottle[0].get());
   cout<<maze.isObstacle(0,0, &w_robot);
   
-  maze.changeSpace(start,'b');
 
 
 
