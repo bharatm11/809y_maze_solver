@@ -29,30 +29,32 @@
 * @brief <brief>
 */
 
-#ifndef MAZE_HPP_
-#define MAZE_HPP_
-#include <vector>
-#include <iostream>
+#pragma once
+// #ifndef MAZE_HPP_
+// #define MAZE_HPP_
+#include "../MobileRobot/MobileRobot.hpp"
+#include "../Targets/Targets.hpp"
+#include "../Targets/Targets.hpp"
 #include <fstream>
+#include <iostream>
 #include <string>
-#include "Targets.hpp"
-#include "Targets.hpp"
-#include "MobileRobot.hpp"
+#include <vector>
 
 class Maze {
 private:
-	char maze_arr[31][46];
-	int n;
-	int m;
-	std::vector<int> start_position;
+  char maze_arr[31][46];
+  int n;
+  int m;
+  std::vector<int> start_position;
+
 public:
-	Maze(std::string);
-	void readMaze(std::string);
-	void displayMaze();
-	bool isObstacle(int, int, MobileRobot);
-	bool isGoal(MobileRobot, Targets);
-	std::vector<int> isTargetInputValid(int, int);
-	// bool isTargetValid(int, int, char);
-	void changeSpace(std::vector<int>, char);
+  Maze(std::string);
+  void readMaze(std::string);
+  void displayMaze();
+  bool isObstacle(int, int, MobileRobot);
+  bool isGoal(MobileRobot, Targets);
+  std::vector<int> isTargetInputValid(int, int);
+  // bool isTargetValid(int, int, char);
+  void changeSpace(std::vector<int>, char);
 };
-#endif //MAZE_HPP_
+// #endif // MAZE_HPP_

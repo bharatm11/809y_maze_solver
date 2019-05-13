@@ -28,21 +28,21 @@
 * @copyright 2019 Bharat Mathur (Github: bharatm11)
 * @brief <brief>
 */
-#include "MobileRobot.hpp"
-#include "Targets.hpp"
-
 #ifndef TRACKEDROBOT_HPP_
 #define TRACKEDROBOT_HPP_
 
-class TrackedRobot: public MobileRobot {
+#include "../Targets/Targets.hpp"
+#include "MobileRobot.hpp"
+
+class TrackedRobot : public MobileRobot {
 public:
-	 TrackedRobot(int, int, Targets);
-   virtual std::vector<int> getTargetLoc();
-	// virtual std::vector<int> Up(int,int) override;
-	// virtual std::vector<int> Down(int,int) override;
-	// virtual std::vector<int> Right(int,int) override;
-	// virtual std::vector<int> Left(int,int) override;
-	// virtual ~TrackedRobot(){};
+  TrackedRobot(int, int, Targets);
+  virtual std::vector<int> getTargetLoc();
+  // virtual std::vector<int> Up(int,int) override;
+  // virtual std::vector<int> Down(int,int) override;
+  // virtual std::vector<int> Right(int,int) override;
+  // virtual std::vector<int> Left(int,int) override;
+  // virtual ~TrackedRobot(){};
 };
 
-#endif //TRACKEDROBOT_HPP_
+#endif // TRACKEDROBOT_HPP_

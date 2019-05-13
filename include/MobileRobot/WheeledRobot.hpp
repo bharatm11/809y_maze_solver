@@ -28,22 +28,21 @@
 * @copyright 2019 Bharat Mathur (Github: bharatm11)
 * @brief <brief>
 */
-
-#include "MobileRobot.hpp"
-
 #ifndef WHEELEDROBOT_HPP_
 #define WHEELEDROBOT_HPP_
 
-class WheeledRobot: public MobileRobot {
+#include "MobileRobot.hpp"
+
+class WheeledRobot : public MobileRobot {
 public:
   WheeledRobot(int, int, Targets);
   virtual std::vector<int> getTargetLoc();
-	// WheeledRobot();
-	// virtual std::vector<int> Up(int,int) override;
-	// virtual std::vector<int> Down(int,int) override;
-	// virtual std::vector<int> Right(int,int) override;
-	// virtual std::vector<int> Left(int,int) override;
-	// virtual ~WheeledRobot(){};
+  // WheeledRobot();
+  // virtual std::vector<int> Up(int,int) override;
+  // virtual std::vector<int> Down(int,int) override;
+  // virtual std::vector<int> Right(int,int) override;
+  // virtual std::vector<int> Left(int,int) override;
+  // virtual ~WheeledRobot(){};
 };
 
-#endif //WHEELEDROBOT_HPP_
+#endif // WHEELEDROBOT_HPP_

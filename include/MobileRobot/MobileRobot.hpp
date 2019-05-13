@@ -28,23 +28,22 @@
 * @copyright 2019 Bharat Mathur (Github: bharatm11)
 * @brief <brief>
 */
-#include <vector>
-#include <iostream>
+#pragma once
+#include "../Targets/Targets.hpp"
 #include <fstream>
+#include <iostream>
 #include <string>
-#include "Targets.hpp"
-
-#ifndef MOBILEROBOT_HPP_
-#define MOBILEROBOT_HPP_
+#include <vector>
 
 class MobileRobot {
 private:
-   std::vector<int> current_position;
-   char visited_marker; // | or -
-   char wrong_turn; //X or Y
-   Targets target;
+  std::vector<int> current_position;
+  char visited_marker; // | or -
+  char wrong_turn;     // X or Y
+  Targets target;
   // std::stack<RobotState*>state_stack; // Defining stack
   friend class Maze;
+
 public:
   // MobileRobot();
   virtual std::vector<int> getTargetLoc();
@@ -55,5 +54,3 @@ public:
   // virtual void update(std::string);     //  =0 Doubt
   // virtual ~MobileRobot(){};
 };
-
-#endif //MOBILEROBOT_HPP_

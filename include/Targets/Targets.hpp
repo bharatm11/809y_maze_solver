@@ -29,21 +29,21 @@
 * @brief <brief>
 */
 
-
 #ifndef TARGETS_HPP_
 #define TARGETS_HPP_
-#include "Maze.hpp"
-#include <vector>
-#include <iostream>
+#include "../Maze/Maze.hpp"
 #include <fstream>
+#include <iostream>
 #include <string>
+#include <vector>
 
 class Targets {
 private:
   std::vector<int> position;
   friend class Maze;
   friend class MobileRobot;
+
 public:
-	Targets(std::vector<int>);
+  Targets(std::vector<int>);
 };
-#endif //TARGETS_HPP_
+#endif // TARGETS_HPP_
