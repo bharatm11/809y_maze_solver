@@ -50,7 +50,7 @@ public:
   void readMaze(std::string);
   void displayMaze();
   bool isObstacle(int, int, MobileRobot*);
-  // bool isGoal(int, int);//MobileRobot, Targets);
+  bool isGoal(MobileRobot*, std::vector<int>);
   std::vector<int> isTargetInputValid(int, int);
   // bool isTargetValid(int, int, char);
   void changeSpace(std::vector<int>, char);

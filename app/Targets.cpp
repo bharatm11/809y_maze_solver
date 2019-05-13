@@ -35,8 +35,12 @@
 #include <fstream>
 #include <string>
 Targets::Targets() {
-  
+
 }
 Targets::Targets(std::vector<int> vec) {
   position = vec;
+}
+
+std::vector<int> Targets::get() {
+  return position;
 }

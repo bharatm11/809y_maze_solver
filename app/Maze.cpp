@@ -122,13 +122,13 @@ bool Maze::isObstacle(int x, int y, MobileRobot* robot){
   }
 }
 
-// bool Maze::isGoal(MobileRobot robot, Targets goal) {
-//   if(robot.getRobotLoc() == goal.position) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
+bool Maze::isGoal(MobileRobot* robot, std::vector<int> goal) {
+  if(robot->getRobotLoc() == goal) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 // bool Maze::isTargetValid(Targets, MobileRobot robot) {
 //   int start_x = robot.current_position[0];

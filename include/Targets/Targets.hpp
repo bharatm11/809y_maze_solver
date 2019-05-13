@@ -47,4 +47,5 @@ private:
 public:
   Targets();
   Targets(std::vector<int>);
+  std::vector<int> get();
 };
