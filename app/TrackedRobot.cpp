@@ -38,9 +38,8 @@
 #include <fstream>
 #include <string>
 
-TrackedRobot::TrackedRobot(int x, int y, Targets t) { // add is valid check
-  target = t;
-  while(x == target.position[0] && y == target.position[1]) {
+TrackedRobot::TrackedRobot(int x, int y, std::vector<int> goal) { // add is valid check
+  while(x == goal[0] && y == goal[1]) {
     std::cout<< "Invalid start position. Please enter different coordinates: "<<std::endl;
     std::cin >>x>>y;
   }
@@ -60,8 +59,7 @@ char TrackedRobot::getWrongTurnMarker() {
   return wrong_turn;
 }
 std::vector<int> TrackedRobot::getGoal() {
-  std::vector<int> v;
-  v = target.position;
-  return v;
+
+  return goal;
 
 }

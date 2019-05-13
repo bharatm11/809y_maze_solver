@@ -33,16 +33,17 @@
 
 #include "../Targets/Targets.hpp"
 #include "../MobileRobot/MobileRobot.hpp"
-
+#include<vector>
 class WheeledRobot : public MobileRobot {
 private:
   std::vector<int> current_position;
   char visited_marker; // | or -
   char wrong_turn;     // X or Y
-  Targets target;
+  //Targets target
+std::vector<int> goal;
   friend class Maze;
 public:
-  WheeledRobot(int, int, Targets);
+  WheeledRobot(int, int, std::vector<int>);
   virtual std::vector<int> getRobotLoc();
   virtual char getVisitedMarker();
   virtual char getWrongTurnMarker();

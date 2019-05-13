@@ -30,6 +30,8 @@
 */
 #include "../include/Maze/Maze.hpp"
 #include "../include/Targets/Targets.hpp"
+#include "../MobileRobot/MobileRobot.hpp"
+#include "../include/MobileRobot/WheeledRobot.hpp"
 #include <vector>
 #include <iostream>
 #include <fstream>
@@ -112,14 +114,14 @@ void Maze::displayMaze() {
   cout << endl;
 }
 
-// bool Maze::isObstacle(int x, int y, MobileRobot robot){
-//   if((maze_arr[x][y] == '#')||(maze_arr[x][y] == robot.getWrongTurnMarker())||(maze_arr[x][y] == robot.getVisitedMarker())) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-//
+bool Maze::isObstacle(int x, int y, MobileRobot* robot){
+  if((maze_arr[x][y] == '#')||(maze_arr[x][y] == robot->getWrongTurnMarker())||(maze_arr[x][y] == robot->getVisitedMarker())) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 // bool Maze::isGoal(MobileRobot robot, Targets goal) {
 //   if(robot.getRobotLoc() == goal.position) {
 //     return true;

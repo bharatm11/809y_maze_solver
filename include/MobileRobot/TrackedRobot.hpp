@@ -28,25 +28,27 @@
 * @copyright 2019 Bharat Mathur (Github: bharatm11)
 * @brief <brief>
 */
-#ifndef TRACKEDROBOT_HPP_
-#define TRACKEDROBOT_HPP_
+#ifndef TrackedRobot_HPP_
+#define TrackedRobot_HPP_
 
 #include "../Targets/Targets.hpp"
 #include "../MobileRobot/MobileRobot.hpp"
-
+#include<vector>
 class TrackedRobot : public MobileRobot {
 private:
   std::vector<int> current_position;
   char visited_marker; // | or -
   char wrong_turn;     // X or Y
-  Targets target;
+  //Targets target
+std::vector<int> goal;
   friend class Maze;
 public:
-  TrackedRobot(int, int, Targets);
+  TrackedRobot(int, int, std::vector<int>);
   virtual std::vector<int> getRobotLoc();
   virtual char getVisitedMarker();
   virtual char getWrongTurnMarker();
   virtual std::vector<int> getGoal();
+  // TrackedRobot();
   // virtual std::vector<int> Up(int,int) override;
   // virtual std::vector<int> Down(int,int) override;
   // virtual std::vector<int> Right(int,int) override;
@@ -54,4 +56,4 @@ public:
   virtual ~TrackedRobot(){};
 };
 
-#endif // TRACKEDROBOT_HPP_
+#endif // TrackedRobot_HPP_
