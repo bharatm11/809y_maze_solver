@@ -46,10 +46,10 @@ private:
 
 public:
   // MobileRobot();
-  virtual std::vector<int> getRobotLoc();
-  virtual char getVisitedMarker();
-  virtual char getWrongTurnMarker();
-  virtual std::vector<int> getGoal();
+  virtual std::vector<int> getRobotLoc() = 0;
+  virtual char getVisitedMarker() = 0;
+  virtual char getWrongTurnMarker() = 0;
+  virtual std::vector<int> getGoal() = 0;
   // virtual std::vector<int> Up(int,int);
   // virtual std::vector<int> Down(int,int);
   // virtual std::vector<int> Right(int,int);

@@ -1,3 +1,0 @@
-/home/bob/test/bb/809y_maze_solver/build-app-Desktop_Qt_5_12_2_GCC_64bit-Default/CMakeFiles/edit_cache.dir
-/home/bob/test/bb/809y_maze_solver/build-app-Desktop_Qt_5_12_2_GCC_64bit-Default/CMakeFiles/rebuild_cache.dir
-/home/bob/test/bb/809y_maze_solver/build-app-Desktop_Qt_5_12_2_GCC_64bit-Default/CMakeFiles/shell-app.dir
