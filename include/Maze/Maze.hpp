@@ -30,8 +30,6 @@
 */
 
 #pragma once
-// #ifndef MAZE_HPP_
-// #define MAZE_HPP_
 #include "../MobileRobot/MobileRobot.hpp"
 #include "../Targets/Targets.hpp"
 #include "../Targets/Targets.hpp"
@@ -57,4 +55,3 @@ public:
   // bool isTargetValid(int, int, char);
   void changeSpace(std::vector<int>, char);
 };
-// #endif // MAZE_HPP_

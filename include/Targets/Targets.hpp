@@ -29,8 +29,7 @@
 * @brief <brief>
 */
 
-#ifndef TARGETS_HPP_
-#define TARGETS_HPP_
+#pragma once
 #include "../Maze/Maze.hpp"
 #include <fstream>
 #include <iostream>
@@ -46,4 +45,3 @@ private:
 public:
   Targets(std::vector<int>);
 };
-#endif // TARGETS_HPP_

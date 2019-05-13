@@ -29,8 +29,8 @@
 * @brief <brief>
 */
 
-#include "Maze.hpp"
-#include "Targets.hpp"
+#include "../include/Maze/Maze.hpp"
+#include "../include/Targets/Targets.hpp"
 #include <vector>
 #include <iostream>
 #include <fstream>
